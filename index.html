@@ -1,0 +1,285 @@
+< !DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>دعم لمح | Lamh Support</title>
+    <meta
+      name="description"
+      content="صفحة دعم تطبيق لمح لمتجر آبل. الرسائل تصل إلى lmh.ksa2@gmail.com"
+    />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f1e6;
+        --card: #fffdf8;
+        --ink: #16332e;
+        --muted: #5b6f6a;
+        --line: #d7e3df;
+        --teal: #0f766e;
+        --teal-dark: #115e59;
+        --gold: #e8c56b;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Cairo, system-ui, sans-serif;
+        background:
+          radial-gradient(900px 400px at 10% -10%, #d9eee8 0%, transparent 50%),
+          var(--bg);
+        color: var(--ink);
+      }
+      .wrap {
+        width: min(440px, calc(100% - 32px));
+        margin: 40px auto 56px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .brand img {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.7rem;
+        line-height: 1.2;
+      }
+      .kicker {
+        margin: 0 0 4px;
+        font-size: 0.75rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--teal);
+        font-weight: 700;
+      }
+      .lead {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .lang {
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--ink);
+        border-radius: 10px;
+        padding: 8px 12px;
+        font: inherit;
+        cursor: pointer;
+      }
+      form,
+      .thanks {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 18px 40px -28px rgba(15, 118, 110, 0.5);
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin: 0 0 6px;
+        font-size: 0.95rem;
+      }
+      .field {
+        margin-bottom: 14px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px 14px;
+        font: inherit;
+        background: #fff;
+        color: var(--ink);
+      }
+      textarea {
+        min-height: 130px;
+        resize: vertical;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 3px solid rgba(15, 118, 110, 0.22);
+        border-color: var(--teal);
+      }
+      button[type="submit"] {
+        width: 100%;
+        border: 0;
+        background: var(--teal);
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        padding: 13px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover {
+        background: var(--teal-dark);
+      }
+      .note,
+      .mail {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+        line-height: 1.7;
+      }
+      .mail {
+        margin-top: 16px;
+        background: #eaf4f1;
+        border-radius: 16px;
+        padding: 12px 14px;
+      }
+      a {
+        color: var(--teal-dark);
+      }
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="brand">
+          <img src="icon.svg" alt="لمح" />
+          <div>
+            <p class="kicker">Lamh · لمح</p>
+            <h1 data-i18n="title">الدعم الفني</h1>
+          </div>
+        </div>
+        <button class="lang" type="button" id="langBtn">English</button>
+      </header>
+      <p class="lead" data-i18n="lead">
+        هذه صفحة الدعم الرسمية لتطبيق لمح في متجر آبل. أرسل مشكلتك وسنرد على بريد الدعم.
+      </p>
+
+      <form
+        id="supportForm"
+        action="https://formsubmit.co/lmh.ksa2@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Lamh / لمح — support request" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" id="nextUrl" value="thank-you.html" />
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+        <div class="field">
+          <label for="name" data-i18n="name">الاسم</label>
+          <input id="name" name="name" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="email" data-i18n="email">بريدك الإلكتروني</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="role" data-i18n="role">أنا</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected data-i18n="choose">مطلوب</option>
+            <option value="traveler" data-i18n="traveler">مسافر</option>
+            <option value="sender" data-i18n="sender">مرسل</option>
+            <option value="other" data-i18n="other">غير ذلك</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="tripId" data-i18n="trip">رقم الرحلة أو الشحنة (اختياري)</label>
+          <input id="tripId" name="trip_or_shipment_id" />
+        </div>
+        <div class="field">
+          <label for="message" data-i18n="message">كيف يمكننا مساعدتك؟</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" data-i18n="submit">إرسال إلى الدعم</button>
+        <p class="note" data-i18n="goesTo">تصل الرسائل إلى lmh.ksa2@gmail.com</p>
+      </form>
+
+      <p class="mail">
+        <span data-i18n="direct">البريد المباشر:</span>
+        <a href="mailto:lmh.ksa2@gmail.com">lmh.ksa2@gmail.com</a>
+      </p>
+    </main>
+    <script>
+      const copy = {
+        ar: {
+          dir: "rtl",
+          langBtn: "English",
+          title: "الدعم الفني",
+          lead: "هذه صفحة الدعم الرسمية لتطبيق لمح في متجر آبل. أرسل مشكلتك وسنرد على بريد الدعم.",
+          name: "الاسم",
+          email: "بريدك الإلكتروني",
+          role: "أنا",
+          choose: "مطلوب",
+          traveler: "مسافر",
+          sender: "مرسل",
+          other: "غير ذلك",
+          trip: "رقم الرحلة أو الشحنة (اختياري)",
+          message: "كيف يمكننا مساعدتك؟",
+          submit: "إرسال إلى الدعم",
+          goesTo: "تصل الرسائل إلى lmh.ksa2@gmail.com",
+          direct: "البريد المباشر:",
+        },
+        en: {
+          dir: "ltr",
+          langBtn: "العربية",
+          title: "Support",
+          lead: "Official App Store support for Lamh. Send your issue and we will reply from the support inbox.",
+          name: "Name",
+          email: "Your email",
+          role: "I am a",
+          choose: "Required",
+          traveler: "Traveler",
+          sender: "Sender",
+          other: "Other",
+          trip: "Trip or shipment ID (optional)",
+          message: "How can we help?",
+          submit: "Send to support",
+          goesTo: "Messages go to lmh.ksa2@gmail.com",
+          direct: "Email us at:",
+        },
+      };
+
+      let lang = "ar";
+      const btn = document.getElementById("langBtn");
+      function apply() {
+        const t = copy[lang];
+        document.documentElement.lang = lang;
+        document.documentElement.dir = t.dir;
+        btn.textContent = t.langBtn;
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (t[key]) el.textContent = t[key];
+        });
+      }
+      btn.addEventListener("click", () => {
+        lang = lang === "ar" ? "en" : "ar";
+        apply();
+      });
+      document.getElementById("nextUrl").value = new URL(
+        "thank-you.html",
+        window.location.href
+      ).href;
+    </script>
+  </body>
+</html>
