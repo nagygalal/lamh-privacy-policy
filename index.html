@@ -1,14 +1,13 @@
-< !DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>دعم لمح | Lamh Support</title>
+    <title>سياسة الخصوصية | Lamh Privacy Policy</title>
     <meta
       name="description"
-      content="صفحة دعم تطبيق لمح لمتجر آبل. الرسائل تصل إلى lmh.ksa2@gmail.com"
+      content="سياسة الخصوصية لتطبيق لمح. Privacy policy for the Lamh traveler shipping app."
     />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,7 +23,6 @@
         --line: #d7e3df;
         --teal: #0f766e;
         --teal-dark: #115e59;
-        --gold: #e8c56b;
       }
       * {
         box-sizing: border-box;
@@ -39,8 +37,8 @@
         color: var(--ink);
       }
       .wrap {
-        width: min(440px, calc(100% - 32px));
-        margin: 40px auto 56px;
+        width: min(760px, calc(100% - 32px));
+        margin: 40px auto 64px;
       }
       header {
         display: flex;
@@ -54,15 +52,21 @@
         gap: 12px;
         align-items: center;
       }
-      .brand img {
+      .mark {
         width: 52px;
         height: 52px;
         border-radius: 14px;
+        background: var(--teal);
+        color: #f4e9d0;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 1.1rem;
       }
       h1 {
         margin: 0;
         font-size: 1.7rem;
-        line-height: 1.2;
+        line-height: 1.25;
       }
       .kicker {
         margin: 0 0 4px;
@@ -72,10 +76,10 @@
         color: var(--teal);
         font-weight: 700;
       }
-      .lead {
+      .meta {
         margin: 8px 0 0;
         color: var(--muted);
-        line-height: 1.7;
+        font-size: 0.92rem;
       }
       .lang {
         border: 1px solid var(--line);
@@ -86,73 +90,48 @@
         font: inherit;
         cursor: pointer;
       }
-      form,
-      .thanks {
+      article {
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: 20px;
-        padding: 20px;
+        padding: 24px 22px 28px;
         box-shadow: 0 18px 40px -28px rgba(15, 118, 110, 0.5);
       }
-      label {
-        display: block;
-        font-weight: 600;
-        margin: 0 0 6px;
-        font-size: 0.95rem;
+      h2 {
+        margin: 22px 0 8px;
+        font-size: 1.15rem;
+        color: var(--teal-dark);
       }
-      .field {
-        margin-bottom: 14px;
+      h2:first-of-type {
+        margin-top: 0;
       }
-      input,
-      select,
-      textarea {
-        width: 100%;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 12px 14px;
-        font: inherit;
-        background: #fff;
+      p,
+      li {
+        line-height: 1.8;
         color: var(--ink);
       }
-      textarea {
-        min-height: 130px;
-        resize: vertical;
+      ul {
+        margin: 0 0 4px;
+        padding-inline-start: 1.25rem;
       }
-      input:focus,
-      select:focus,
-      textarea:focus {
-        outline: 3px solid rgba(15, 118, 110, 0.22);
-        border-color: var(--teal);
-      }
-      button[type="submit"] {
-        width: 100%;
-        border: 0;
-        background: var(--teal);
-        color: #fff;
-        font: inherit;
-        font-weight: 700;
-        padding: 13px;
-        border-radius: 12px;
-        cursor: pointer;
-      }
-      button[type="submit"]:hover {
-        background: var(--teal-dark);
-      }
-      .note,
-      .mail {
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.85rem;
-        line-height: 1.7;
-      }
-      .mail {
-        margin-top: 16px;
-        background: #eaf4f1;
-        border-radius: 16px;
-        padding: 12px 14px;
+      li {
+        margin: 6px 0;
       }
       a {
         color: var(--teal-dark);
+      }
+      .lead {
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+      .mail {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+        background: #eaf4f1;
+        border-radius: 16px;
+        padding: 12px 14px;
       }
       .hidden {
         display: none !important;
@@ -163,123 +142,221 @@
     <main class="wrap">
       <header>
         <div class="brand">
-          <img src="icon.svg" alt="لمح" />
+          <div class="mark" aria-hidden="true">لمح</div>
           <div>
             <p class="kicker">Lamh · لمح</p>
-            <h1 data-i18n="title">الدعم الفني</h1>
+            <h1 id="pageTitle">سياسة الخصوصية</h1>
+            <p class="meta" id="updated">آخر تحديث: 21 سبتمبر 2026</p>
           </div>
         </div>
         <button class="lang" type="button" id="langBtn">English</button>
       </header>
-      <p class="lead" data-i18n="lead">
-        هذه صفحة الدعم الرسمية لتطبيق لمح في متجر آبل. أرسل مشكلتك وسنرد على بريد الدعم.
-      </p>
 
-      <form
-        id="supportForm"
-        action="https://formsubmit.co/lmh.ksa2@gmail.com"
-        method="POST"
-      >
-        <input type="hidden" name="_subject" value="Lamh / لمح — support request" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" id="nextUrl" value="thank-you.html" />
-        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+      <article id="ar">
+        <p class="lead">
+          تطبيق <strong>لمح</strong> يتيح للمسافر إنشاء رحلة وتحديد وزن الحمل،
+          وللمرسل طلب شحنة مع هذا المسافر. توضّح هذه السياسة البيانات التي نجمعها
+          وكيف نستخدمها.
+        </p>
 
-        <div class="field">
-          <label for="name" data-i18n="name">الاسم</label>
-          <input id="name" name="name" required autocomplete="name" />
-        </div>
-        <div class="field">
-          <label for="email" data-i18n="email">بريدك الإلكتروني</label>
-          <input id="email" name="email" type="email" required autocomplete="email" />
-        </div>
-        <div class="field">
-          <label for="role" data-i18n="role">أنا</label>
-          <select id="role" name="role" required>
-            <option value="" disabled selected data-i18n="choose">مطلوب</option>
-            <option value="traveler" data-i18n="traveler">مسافر</option>
-            <option value="sender" data-i18n="sender">مرسل</option>
-            <option value="other" data-i18n="other">غير ذلك</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="tripId" data-i18n="trip">رقم الرحلة أو الشحنة (اختياري)</label>
-          <input id="tripId" name="trip_or_shipment_id" />
-        </div>
-        <div class="field">
-          <label for="message" data-i18n="message">كيف يمكننا مساعدتك؟</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" data-i18n="submit">إرسال إلى الدعم</button>
-        <p class="note" data-i18n="goesTo">تصل الرسائل إلى lmh.ksa2@gmail.com</p>
-      </form>
+        <h2>المعلومات التي نقوم بجمعها</h2>
+        <p>نقوم بجمع البيانات التالية:</p>
+        <ul>
+          <li>البيانات الشخصية (الاسم، رقم الجوال، البريد الإلكتروني)</li>
+          <li>بيانات الحساب والرحلات وطلبات الشحن</li>
+          <li>بيانات الجهاز والاستخدام</li>
+          <li>بيانات مكان التسليم والاستلام لتسليم الشحنة بين الطرفين</li>
+        </ul>
+
+        <h2>استخدام البيانات</h2>
+        <p>تُستخدم البيانات من أجل:</p>
+        <ul>
+          <li>تقديم خدمة الربط بين المسافر والمرسل</li>
+          <li>إنشاء الرحلة وتحديد وزن الحمل وطلب الشحنة</li>
+          <li>التحقق من هوية المستخدم</li>
+          <li>إرسال الإشعارات والتنبيهات</li>
+          <li>تحسين أداء وأمان التطبيق</li>
+        </ul>
+
+        <h2>مشاركة البيانات</h2>
+        <p>قد يتم مشاركة البيانات مع:</p>
+        <ul>
+          <li>المسافر أو المرسل المرتبط بالرحلة أو الشحنة، بالقدر اللازم للاتفاق والتسليم</li>
+          <li>مزودي خدمة الرسائل (OTP) عند التحقق من رقم الجوال</li>
+          <li>مزودي الاستضافة وتشغيل التطبيق</li>
+          <li>الجهات الرسمية عند الطلب النظامي</li>
+        </ul>
+        <p>ولا يتم بيع أو تأجير بيانات المستخدم لأي طرف ثالث.</p>
+
+        <h2>حماية البيانات</h2>
+        <ul>
+          <li>تشفير البيانات أثناء النقل والتخزين قدر الإمكان</li>
+          <li>استخدام بروتوكولات أمان مناسبة لتشغيل التطبيق</li>
+          <li>مراجعات أمنية دورية</li>
+        </ul>
+
+        <h2>الاحتفاظ بالبيانات</h2>
+        <ul>
+          <li>يتم الاحتفاظ بالبيانات للمدة اللازمة فقط لتشغيل الخدمة والدعم والالتزامات النظامية</li>
+          <li>يمكن للمستخدم طلب حذف حسابه نهائيًا من التطبيق</li>
+        </ul>
+
+        <h2>حقوق المستخدم</h2>
+        <p>يحق للمستخدم:</p>
+        <ul>
+          <li>الوصول إلى بياناته</li>
+          <li>تعديل معلوماته</li>
+          <li>حذف حسابه</li>
+          <li>إيقاف الإشعارات غير الضرورية</li>
+        </ul>
+
+        <h2>ملفات تعريف الارتباط (Cookies)</h2>
+        <p>
+          قد يستخدم التطبيق تقنيات مشابهة لتحسين تجربة المستخدم وتحليل الأداء.
+        </p>
+
+        <h2>التعديلات على سياسة الخصوصية</h2>
+        <p>سيتم إشعار المستخدمين بأي تعديل عبر:</p>
+        <ul>
+          <li>إشعار داخل التطبيق</li>
+          <li>تحديث النص في صفحة سياسة الخصوصية</li>
+        </ul>
+
+        <h2>التواصل</h2>
+        <p>للاستفسارات المتعلقة بالخصوصية:</p>
+        <ul>
+          <li>
+            البريد الإلكتروني:
+            <a href="mailto:lmh.ksa2@gmail.com">lmh.ksa2@gmail.com</a>
+          </li>
+          <li>بيانات التواصل المعروضة داخل التطبيق</li>
+        </ul>
+      </article>
+
+      <article id="en" class="hidden">
+        <p class="lead">
+          <strong>Lamh</strong> lets travelers create a trip and set a carry
+          weight, and lets senders request a shipment with that traveler. This
+          policy explains what we collect and how we use it.
+        </p>
+
+        <h2>Information we collect</h2>
+        <p>We collect the following data:</p>
+        <ul>
+          <li>Personal data (name, mobile number, email)</li>
+          <li>Account, trip, and shipment-request data</li>
+          <li>Device and usage data</li>
+          <li>Handover location details for delivery between the two parties</li>
+        </ul>
+
+        <h2>How we use data</h2>
+        <p>We use data to:</p>
+        <ul>
+          <li>Match travelers and senders</li>
+          <li>Create trips, set carry weight, and request shipments</li>
+          <li>Verify the user’s identity</li>
+          <li>Send notifications and alerts</li>
+          <li>Improve app performance and security</li>
+        </ul>
+
+        <h2>Sharing data</h2>
+        <p>Data may be shared with:</p>
+        <ul>
+          <li>
+            The traveler or sender linked to a trip or shipment, as needed to
+            agree and hand over the parcel
+          </li>
+          <li>SMS providers (OTP) when verifying a mobile number</li>
+          <li>Hosting and app-operation providers</li>
+          <li>Official authorities when legally required</li>
+        </ul>
+        <p>User data is not sold or rented to any third party.</p>
+
+        <h2>Data protection</h2>
+        <ul>
+          <li>Encryption in transit and at rest where reasonably possible</li>
+          <li>Security protocols appropriate to running the app</li>
+          <li>Periodic security reviews</li>
+        </ul>
+
+        <h2>Data retention</h2>
+        <ul>
+          <li>
+            Data is kept only as long as needed to run the service, provide
+            support, and meet legal duties
+          </li>
+          <li>The user may request permanent deletion of their account from the app</li>
+        </ul>
+
+        <h2>User rights</h2>
+        <p>The user may:</p>
+        <ul>
+          <li>Access their data</li>
+          <li>Update their information</li>
+          <li>Delete their account</li>
+          <li>Turn off non-essential notifications</li>
+        </ul>
+
+        <h2>Cookies</h2>
+        <p>
+          The app may use similar technologies to improve the user experience
+          and analyze performance.
+        </p>
+
+        <h2>Changes to this privacy policy</h2>
+        <p>Users will be notified of any change through:</p>
+        <ul>
+          <li>An in-app notice</li>
+          <li>An update to the text on this privacy policy page</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>For privacy questions:</p>
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:lmh.ksa2@gmail.com">lmh.ksa2@gmail.com</a>
+          </li>
+          <li>The contact details shown inside the app</li>
+        </ul>
+      </article>
 
       <p class="mail">
-        <span data-i18n="direct">البريد المباشر:</span>
         <a href="mailto:lmh.ksa2@gmail.com">lmh.ksa2@gmail.com</a>
+        · Noon Family · © 2026 Lamh / لمح
       </p>
     </main>
     <script>
-      const copy = {
+      const ui = {
         ar: {
           dir: "rtl",
           langBtn: "English",
-          title: "الدعم الفني",
-          lead: "هذه صفحة الدعم الرسمية لتطبيق لمح في متجر آبل. أرسل مشكلتك وسنرد على بريد الدعم.",
-          name: "الاسم",
-          email: "بريدك الإلكتروني",
-          role: "أنا",
-          choose: "مطلوب",
-          traveler: "مسافر",
-          sender: "مرسل",
-          other: "غير ذلك",
-          trip: "رقم الرحلة أو الشحنة (اختياري)",
-          message: "كيف يمكننا مساعدتك؟",
-          submit: "إرسال إلى الدعم",
-          goesTo: "تصل الرسائل إلى lmh.ksa2@gmail.com",
-          direct: "البريد المباشر:",
+          title: "سياسة الخصوصية",
+          updated: "آخر تحديث: 21 سبتمبر 2026",
         },
         en: {
           dir: "ltr",
           langBtn: "العربية",
-          title: "Support",
-          lead: "Official App Store support for Lamh. Send your issue and we will reply from the support inbox.",
-          name: "Name",
-          email: "Your email",
-          role: "I am a",
-          choose: "Required",
-          traveler: "Traveler",
-          sender: "Sender",
-          other: "Other",
-          trip: "Trip or shipment ID (optional)",
-          message: "How can we help?",
-          submit: "Send to support",
-          goesTo: "Messages go to lmh.ksa2@gmail.com",
-          direct: "Email us at:",
+          title: "Privacy Policy",
+          updated: "Last updated: 21 September 2026",
         },
       };
-
       let lang = "ar";
       const btn = document.getElementById("langBtn");
       function apply() {
-        const t = copy[lang];
+        const t = ui[lang];
         document.documentElement.lang = lang;
         document.documentElement.dir = t.dir;
         btn.textContent = t.langBtn;
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-          const key = el.getAttribute("data-i18n");
-          if (t[key]) el.textContent = t[key];
-        });
+        document.getElementById("pageTitle").textContent = t.title;
+        document.getElementById("updated").textContent = t.updated;
+        document.getElementById("ar").classList.toggle("hidden", lang !== "ar");
+        document.getElementById("en").classList.toggle("hidden", lang !== "en");
       }
       btn.addEventListener("click", () => {
         lang = lang === "ar" ? "en" : "ar";
         apply();
       });
-      document.getElementById("nextUrl").value = new URL(
-        "thank-you.html",
-        window.location.href
-      ).href;
     </script>
   </body>
 </html>
